@@ -35,7 +35,7 @@ A weather forecast application built with **Ruby on Rails 7.1**, integrating Goo
 
 ```bash
 git clone https://github.com/your-username/weather-forecast-app.git
-cd weather-forecast-app
+cd rails-weather-forecast
 bundle install
 ```
 
@@ -134,10 +134,4 @@ app/
 
 ## 👨‍💻 Author
 
-Hema – [LinkedIn](#) | [GitHub](#)
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
+Hema – [LinkedIn](https://www.linkedin.com/in/hemadevi-vanapalli-21b756260/) | [GitHub](https://github.com/hemadevivanapalli)
