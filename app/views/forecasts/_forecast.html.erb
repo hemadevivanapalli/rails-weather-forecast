@@ -1,0 +1,23 @@
+<h2 class="forecast-title">
+  5-Day Forecast for <%= address %>
+  <% if defined?(@cached) && @cached %>
+    <span class="cache-badge">(pulled from cache)</span>
+  <% end %>
+</h2>
+
+<div class="forecast-list">
+  <% forecast_data["forecastDays"].each do |day| %>
+    <% summary = forecast_day_summary(day) %>
+
+    <div class="forecast-card">
+      <div class="forecast-day"><%= summary[:day_label] %></div>
+      <div class="forecast-date"><%= summary[:short_date] %></div>
+      <div class="forecast-temp"><%= summary[:max_temp] %>° / <span><%= summary[:min_temp] %>°</span></div>
+      <div class="forecast-description">
+        <div class="day-condition"><%= summary[:day_condition] %></div>
+        <div class="night-condition"><%= summary[:night_condition] %></div>
+      </div>
+      <div class="forecast-precip">💧 <%= summary[:precip] %>%</div>
+    </div>
+  <% end %>
+</div>

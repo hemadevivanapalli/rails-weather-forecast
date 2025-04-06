@@ -1,0 +1,17 @@
+<turbo-frame id="forecast_results">
+  <div data-controller="loader" data-action="turbo:submit-start->loader#showSpinner turbo:submit-end->loader#hideSpinner">
+    <%= render "form" %>
+
+    <div data-loader-target="spinner" class="spinner">
+      Loading forecast...
+    </div>
+
+    <% if @error_message.present? %>
+      <p class="error-message"><%= @error_message %></p>
+    <% end %>
+
+    <% if @forecast_data.present? %>
+      <%= render "forecast", forecast_data: @forecast_data, address: @address %>
+    <% end %>
+  </div>
+</turbo-frame>

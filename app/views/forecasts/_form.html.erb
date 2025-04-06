@@ -1,0 +1,10 @@
+<%= form_with url: forecasts_path, method: :post do |form| %>
+  <div class="form-group">
+    <%= form.label :address, "Enter Address:" %><br>
+    <%= form.text_field :address, value: @address, required: true, class: "input-text" %>
+  </div>
+
+  <div class="form-actions">
+    <%= form.submit "Get Forecast", class: "btn" %>
+  </div>
+<% end %>
